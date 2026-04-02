@@ -4,22 +4,22 @@
 class Opencode < Formula
   desc "AI coding agent for the terminal (f5xc fork with LiteLLM fixes)"
   homepage "https://github.com/f5xc-salesdemos/opencode"
-  version "1.3.13-f5xc.5"
+  version "1.3.13-f5xc.6"
 
   depends_on "ripgrep"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/f5xc-salesdemos/opencode/releases/download/v1.3.13-f5xc.5/opencode-darwin-x64.zip"
-      sha256 "dbb6de6956f33e9ceb0e94af11eb377b24070c58662d53f2f1dad91b3681c2d4"
+      url "https://github.com/f5xc-salesdemos/opencode/releases/download/v1.3.13-f5xc.6/opencode-darwin-x64.zip"
+      sha256 "89b15855c9f2ef843d2e2e8c045dfb256e839aaab05ecee2a3258cec87c6c164"
 
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/f5xc-salesdemos/opencode/releases/download/v1.3.13-f5xc.5/opencode-darwin-arm64.zip"
-      sha256 "b822968c8f6d9df6e02775c1f06544366793fbf7acfaa91ae4a215d6e9683c7a"
+      url "https://github.com/f5xc-salesdemos/opencode/releases/download/v1.3.13-f5xc.6/opencode-darwin-arm64.zip"
+      sha256 "0583647b0fa5e75f54a589fca7ad8fb8166bd7709ca5ff3dff5b83450dc287d8"
 
       def install
         bin.install "opencode"
@@ -29,15 +29,15 @@ class Opencode < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/f5xc-salesdemos/opencode/releases/download/v1.3.13-f5xc.5/opencode-linux-x64.tar.gz"
-      sha256 "075bce109a4c4693bf80322a1ccb3fa414c7afca96e2c2fdb8d6794b5a17a770"
+      url "https://github.com/f5xc-salesdemos/opencode/releases/download/v1.3.13-f5xc.6/opencode-linux-x64.tar.gz"
+      sha256 "a2b83a4ef2a7f93dc3ea371ef750973070ccf1b9626c7fbd6403d17336433605"
       def install
         bin.install "opencode"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/f5xc-salesdemos/opencode/releases/download/v1.3.13-f5xc.5/opencode-linux-arm64.tar.gz"
-      sha256 "4ba9f824a818a887427914f11d428e89a8c40ec3aa15d25348cd1ef0be537318"
+      url "https://github.com/f5xc-salesdemos/opencode/releases/download/v1.3.13-f5xc.6/opencode-linux-arm64.tar.gz"
+      sha256 "acb428e39eb926a3501773a5f6a802186606f88f6e7309b9d3c33e57227559b9"
       def install
         bin.install "opencode"
       end

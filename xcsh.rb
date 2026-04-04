@@ -11,7 +11,7 @@ class Xcsh < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v1.3.13-f5xc.18/xcsh-darwin-x64.zip"
-      sha256 "a5421eac03e25b5b3ec93a59afe1035d40d40f1ff05c4277f430984ea75ff3b4"
+      sha256 "64e648255889e0e9190f2eacb1142c8cd65709ce889e2663e49cb5c77d407f29"
 
       def install
         bin.install "xcsh"
@@ -19,7 +19,7 @@ class Xcsh < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v1.3.13-f5xc.18/xcsh-darwin-arm64.zip"
-      sha256 "0f1f752d8521fd4fb80d7484ab6a44bf2ff965c17de7f872f4784b45f069565b"
+      sha256 "89f54879230f29e5f4562473d27677c4c5d551d0313cf517d5e94a4a907bf810"
 
       def install
         bin.install "xcsh"
@@ -30,14 +30,14 @@ class Xcsh < Formula
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
       url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v1.3.13-f5xc.18/xcsh-linux-x64.tar.gz"
-      sha256 "9e1293f9b2f37ac75f339a2977d51d51c6d5e98522ba2beb9f81b2e2f8b49bb1"
+      sha256 "c34e6a32a216e6c5cb539217d748155c3e41bf64e095e5fd60c4b44fced779ee"
       def install
         bin.install "xcsh"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
       url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v1.3.13-f5xc.18/xcsh-linux-arm64.tar.gz"
-      sha256 "4e853f63e2f50c14eee7cbd3908d686964389ffc299d72dc003f970a4429c295"
+      sha256 "40372f8161127c45cc95de0b2b6720c3f4fecdeed1af8bb494fe46706b919e78"
       def install
         bin.install "xcsh"
       end

@@ -2,24 +2,24 @@
 # frozen_string_literal: true
 
 class Xcsh < Formula
-  desc "AI-powered coding agent CLI and LLM tools"
+  desc "AI coding agent for the terminal"
   homepage "https://github.com/f5xc-salesdemos/xcsh"
-  version "2.2.0"
+  version "14.6.0"
 
   depends_on "ripgrep"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v2.2.0/xcsh-darwin-x64.tar.gz"
-      sha256 "2ee9987387ba4dbbfbcee12dd1f0b0242244cf6bbfc77a698a68e3829425db0c"
+      url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v14.6.0/xcsh-darwin-x64.zip"
+      sha256 "215621592127b9141ea6679427863a2334e6ad0a7bcb7fbf87b5d600956e3dac"
 
       def install
         bin.install "xcsh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v2.2.0/xcsh-darwin-arm64.tar.gz"
-      sha256 "41de69d4a2ea52b02933c599a193cffb509827b3b390b1e73ad32f9276944fe6"
+      url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v14.6.0/xcsh-darwin-arm64.zip"
+      sha256 "6ddb004d4dc653c469934f24cc80fb1d98ea7d78414bc2485f2fe107a25e4c85"
 
       def install
         bin.install "xcsh"
@@ -29,15 +29,17 @@ class Xcsh < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v2.2.0/xcsh-linux-x64.tar.gz"
-      sha256 "f9baf974c494d640c035f731bd1ab8a2620a14b9e29ff161ea0af959034ae9f9"
+      url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v14.6.0/xcsh-linux-x64.tar.gz"
+      sha256 "1e6c4460f16dc07de29377a6fc2ee2f288a6ee1268ccc667980ec8eba02e6155"
+
       def install
         bin.install "xcsh"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v2.2.0/xcsh-linux-arm64.tar.gz"
-      sha256 "10d8ac0a9cc5729312e436a2f705c6693ee115c20027123e45f6db59ea07126d"
+      url "https://github.com/f5xc-salesdemos/xcsh/releases/download/v14.6.0/xcsh-linux-arm64.tar.gz"
+      sha256 "852b74421ed77767623ce8bf8cdbdba21339aa639c421e8e36d87ac35e6f792b"
+
       def install
         bin.install "xcsh"
       end
